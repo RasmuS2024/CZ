@@ -25,11 +25,6 @@ public class Main {
         dogEnclosure.showInfo();
         pandaEnclosure.showInfo();
 
-
-
-
-
-
         ZooERP zoo = new ZooERP();
         
         zoo.addAnimal(dog);
