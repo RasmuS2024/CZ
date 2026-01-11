@@ -1,6 +1,6 @@
 package animals;
 
-public class Panda extends Animal implements Soundable, Movable, Eatable {
+public class Panda extends Animal implements Soundable, Movable, Feedable {
     
     public Panda(String name, int age, String color) {
         super(name, age, color);
