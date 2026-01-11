@@ -22,7 +22,7 @@ public class MedicalLog {
                 System.out.println(log);
             }
         }
-        System.out.println("=========================");
+        System.out.println("==================================");
     }
     
     public String getLastCheckup(String animalName) {
