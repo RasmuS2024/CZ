@@ -3,15 +3,17 @@ package animals;
 public abstract class Animal {
     private String name;
     private int age;
-    private String color;
+    private String species;
     
-    public Animal(String name, int age, String color) {
+    public Animal(String name, int age, String species) {
         this.name = name;
         this.age = age;
-        this.color = color;
+        this.species = species;
     }
     
     public String getName() { return name; }
     public int getAge() { return age; }
-    public String getColor() { return color; }
+    public String getSpecies() { return species; }
+    
+    public abstract void makeSound();
 }
