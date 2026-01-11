@@ -21,7 +21,7 @@ public class ExhibitionLog {
                 System.out.println(log);
             }
         }
-        System.out.println("======================");
+        System.out.println("=======================");
     }
     
 }

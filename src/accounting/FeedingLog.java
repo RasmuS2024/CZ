@@ -22,7 +22,7 @@ public class FeedingLog {
                 System.out.println(log);
             }
         }
-        System.out.println("=======================");
+        System.out.println("========================");
     }
     
     public int getTotalFeedings() {
