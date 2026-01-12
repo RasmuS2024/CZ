@@ -40,8 +40,8 @@ public class ZooERP {
     public void checkAnimals() {
         System.out.println("\nМЕДОСМОТР ЖИВОТНЫХ");
         for (animals.Animal animal : animals) {
-            if (animal instanceof animals.interfaces.MedicalCheckup) {
-                ((animals.interfaces.MedicalCheckup) animal).performCheckup();
+            if (animal instanceof animals.interfaces.Treatable) {
+                ((animals.interfaces.Treatable) animal).performCheckup();
                 medicalLog.logCheckup(animal.getName(), 
                     "Ветеринар", "Здоров");
             }

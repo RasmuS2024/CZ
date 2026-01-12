@@ -29,8 +29,4 @@
 
 В классе Main реализована проверка работы всех систем зоопарка.
 
-Скриншоты работы программы:
 
-<img width="1235" height="800" alt="изображение" src="https://github.com/user-attachments/assets/cba0412a-1b25-4ef2-91a4-ea4c47c71a41" />
-
-<img width="1235" height="800" alt="изображение" src="https://github.com/user-attachments/assets/16cf0713-9344-4845-8788-9e0266a6fcdf" />

@@ -1,19 +1,21 @@
 package animals;
 
-public abstract class Animal {
-    private String name;
-    private int age;
-    private String species;
+abstract class Animal {
+    protected String name;
+    protected String species;
     
-    public Animal(String name, int age, String species) {
+    public Animal(String name, String species) {
         this.name = name;
-        this.age = age;
         this.species = species;
     }
     
+    public abstract void makeSound();
+    
     public String getName() { return name; }
-    public int getAge() { return age; }
     public String getSpecies() { return species; }
     
-    public abstract void makeSound();
+    @Override
+    public String toString() {
+        return species + " " + name;
+    }
 }

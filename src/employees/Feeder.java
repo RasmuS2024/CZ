@@ -3,13 +3,23 @@ package employees;
 import animals.interfaces.Feedable;
 
 public class Feeder extends Employee {
+    private Feedable animal;
     
-    public Feeder(String name, int id) {
-        super(name, id, "Кормилец");
+    public Feeder(String name) {
+        super(name, "Кормилец");
     }
     
-    public void feedAnimal(Feedable animal) {
-        System.out.println(getName() + " кормит животное");
-        animal.eat();
+    public void setAnimal(Feedable animal) {
+        this.animal = animal;
+    }
+    
+    @Override
+    public void work() {
+        if (animal != null) {
+            System.out.println(name + " кормит животное");
+            animal.feed();
+        } else {
+            System.out.println(name + " не назначено животное для кормления");
+        }
     }
 }

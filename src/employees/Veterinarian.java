@@ -1,6 +1,6 @@
 package employees;
 
-import animals.interfaces.MedicalCheckup;
+import animals.interfaces.Treatable;
 
 public class Veterinarian extends Employee {
     
@@ -8,7 +8,7 @@ public class Veterinarian extends Employee {
         super(name, id, "Ветеринар");
     }
     
-    public void performCheckup(MedicalCheckup animal) {
+    public void performCheckup(Treatable animal) {
         System.out.println(getName() + " проводит медосмотр");
         animal.performCheckup();
     }
