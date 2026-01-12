@@ -1,6 +1,6 @@
 package employees;
 
-abstract class Employee {
+public abstract class Employee {
     protected String name;
     protected String position;
     

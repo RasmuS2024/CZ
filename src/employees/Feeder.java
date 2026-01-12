@@ -1,25 +1,36 @@
 package employees;
 
 import animals.interfaces.Feedable;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Feeder extends Employee {
-    private Feedable animal;
+    private List<Feedable> animals;  // СПИСОК животных
     
     public Feeder(String name) {
         super(name, "Кормилец");
+        this.animals = new ArrayList<>();
     }
     
-    public void setAnimal(Feedable animal) {
-        this.animal = animal;
+    // Добавить животное для кормления
+    public void addAnimal(Feedable animal) {
+        animals.add(animal);
     }
     
     @Override
     public void work() {
-        if (animal != null) {
-            System.out.println(name + " кормит животное");
-            animal.feed();
+        if (animals.isEmpty()) {
+            System.out.println(name + " не назначены животные для кормления");
         } else {
-            System.out.println(name + " не назначено животное для кормления");
+            System.out.println(name + " кормит животных:");
+            for (Feedable animal : animals) {
+                animal.feed();
+            }
         }
+    }
+    
+    // Сколько животных у этого сотрудника
+    public int getAnimalCount() {
+        return animals.size();
     }
 }
