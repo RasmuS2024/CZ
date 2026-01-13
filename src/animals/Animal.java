@@ -13,9 +13,4 @@ public abstract class Animal {
     
     public String getName() { return name; }
     public String getSpecies() { return species; }
-    
-    @Override
-    public String toString() {
-        return species + " " + name;
-    }
 }

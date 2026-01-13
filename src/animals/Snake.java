@@ -1,16 +1,16 @@
 package animals;
 
 import animals.interfaces.Feedable;
-import animals.interfaces.Treatable;
+import animals.interfaces.MedicalCheckup;
 
-public class Snake extends Animal implements Feedable, Treatable {
+public class Snake extends Animal implements Feedable, MedicalCheckup {
     public Snake(String name) {
         super(name, "Змея");
     }
     
     @Override
     public void makeSound() {
-        System.out.println(name + " шипит: Ш-ш-ш-ш!");
+        System.out.println(name + " шипит");
     }
     
     @Override
@@ -20,11 +20,11 @@ public class Snake extends Animal implements Feedable, Treatable {
     
     @Override
     public String getFoodType() {
-        return "Грызуны";
+        return "Грызуны (раз в неделю)";
     }
     
     @Override
-    public void treat() {
-        System.out.println("Лечим змею " + name);
+    public void checkup() {
+        System.out.println("Медосмотр змеи " + name);
     }
 }

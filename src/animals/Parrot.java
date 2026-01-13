@@ -1,17 +1,17 @@
 package animals;
 
 import animals.interfaces.Feedable;
+import animals.interfaces.MedicalCheckup;
 import animals.interfaces.Cleanable;
-import animals.interfaces.Treatable;
 
-public class Parrot extends Animal implements Feedable, Cleanable, Treatable {
+public class Parrot extends Animal implements Feedable, MedicalCheckup, Cleanable {
     public Parrot(String name) {
         super(name, "Попугай");
     }
     
     @Override
     public void makeSound() {
-        System.out.println(name + " говорит: Привет!");
+        System.out.println(name + " говорит");
     }
     
     @Override
@@ -21,16 +21,16 @@ public class Parrot extends Animal implements Feedable, Cleanable, Treatable {
     
     @Override
     public String getFoodType() {
-        return "Зерна";
+        return "Зерна (8:00, 12:00, 17:00)";
+    }
+    
+    @Override
+    public void checkup() {
+        System.out.println("Медосмотр попугая " + name);
     }
     
     @Override
     public void clean() {
         System.out.println("Чистим клетку попугая " + name);
-    }
-    
-    @Override
-    public void treat() {
-        System.out.println("Лечим попугая " + name);
     }
 }

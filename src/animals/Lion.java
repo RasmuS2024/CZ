@@ -1,17 +1,17 @@
 package animals;
 
 import animals.interfaces.Feedable;
+import animals.interfaces.MedicalCheckup;
 import animals.interfaces.Cleanable;
-import animals.interfaces.Treatable;
 
-public class Lion extends Animal implements Feedable, Cleanable, Treatable {
+public class Lion extends Animal implements Feedable, MedicalCheckup, Cleanable {
     public Lion(String name) {
         super(name, "Лев");
     }
     
     @Override
     public void makeSound() {
-        System.out.println(name + " рычит: Р-р-р-р!");
+        System.out.println(name + " рычит");
     }
     
     @Override
@@ -21,16 +21,16 @@ public class Lion extends Animal implements Feedable, Cleanable, Treatable {
     
     @Override
     public String getFoodType() {
-        return "Мясо";
+        return "Мясо (9:00, 18:00)";
+    }
+    
+    @Override
+    public void checkup() {
+        System.out.println("Медосмотр льва " + name);
     }
     
     @Override
     public void clean() {
         System.out.println("Убираем вольер льва " + name);
-    }
-    
-    @Override
-    public void treat() {
-        System.out.println("Лечим льва " + name);
     }
 }
